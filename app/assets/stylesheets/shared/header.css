@@ -17,6 +17,13 @@
   list-style: none;
   align-items: flex-end;
 }
+.user-first-name {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
 .logout {
   text-decoration: none;
   color: #333333;
