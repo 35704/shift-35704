@@ -4,6 +4,7 @@ class CreateShifts < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :content
       t.datetime :start_time
+      t.references :user
       t.timestamps
     end
   end

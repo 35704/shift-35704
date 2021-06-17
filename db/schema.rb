@@ -16,8 +16,10 @@ ActiveRecord::Schema.define(version: 2021_06_16_085832) do
     t.string "title"
     t.text "content"
     t.datetime "start_time"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_shifts_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

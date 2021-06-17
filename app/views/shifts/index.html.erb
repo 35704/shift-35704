@@ -7,7 +7,9 @@
 
   <% shifts.each do |shift| %>
     <div>
-      <%= shift.title %>
+      <%= link_to shift_path(shift.id) do %>
+        <%= shift.title %>
+      <% end %>
     </div>
   <% end %>
 <% end %>

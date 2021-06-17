@@ -18,6 +18,12 @@ class ShiftsController < ApplicationController
     @shift = Shift.find(params[:id])
   end
 
+  def destroy
+    @shift = Shift.find(params[:id])
+    @shift.destroy
+    redirect_to root_path
+  end
+
   private
 
   def shift_params
