@@ -8,7 +8,7 @@
   <% shifts.each do |shift| %>
     <div>
       <%= link_to shift_path(shift.id) do %>
-        <%= shift.title %>
+        <%= shift.user.first_name %>
       <% end %>
       <%= shift.content %>
     </div>
