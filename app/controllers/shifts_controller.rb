@@ -2,6 +2,8 @@ class ShiftsController < ApplicationController
 
   def index
     @shifts = Shift.all
+    @comment = Comment.new
+    @comment = @shift.comment.includes(:user)
   end
 
   def new
