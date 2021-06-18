@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'shifts#index'
-  resources :shifts do
-    resources :comments
-  end
+  resources :shifts 
+  resources :comments
+  
 end

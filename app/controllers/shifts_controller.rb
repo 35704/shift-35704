@@ -2,8 +2,7 @@ class ShiftsController < ApplicationController
 
   def index
     @shifts = Shift.all
-    @comment = Comment.new
-    @comment = @shift.comment.includes(:user)
+    @comments = Comment.all
   end
 
   def new
@@ -18,6 +17,7 @@ class ShiftsController < ApplicationController
 
   def show
     @shift = Shift.find(params[:id])
+    
   end
 
   def destroy
