@@ -1,0 +1,5 @@
+
+<%= @shift.user.first_name %>
+<%= @shift.title %>
+
+<%= link_to "削除", shift_path(@shift.id), method: :delete, class:"item-destroy" %>

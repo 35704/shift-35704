@@ -1,2 +1,16 @@
 <%= render "shared/header" %>
 
+<%= link_to 'シフトの追加', new_shift_path %>
+
+<%= month_calendar events: @shifts do |date, shifts| %>
+  <%= date.day %>
+
+  <% shifts.each do |shift| %>
+    <div>
+      <%= link_to shift_path(shift.id) do %>
+        <%= shift.user.first_name %>
+      <% end %>
+      <%= shift.title %>
+    </div>
+  <% end %>
+<% end %>
