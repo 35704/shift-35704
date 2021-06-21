@@ -10,4 +10,5 @@ class User < ApplicationRecord
   end
 
   has_many :shifts
+  has_many :comments
 end

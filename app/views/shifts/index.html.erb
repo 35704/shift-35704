@@ -1,5 +1,7 @@
 <%= render "shared/header" %>
 
+<%= render "comments/index", comment: @comments %>
+
 <%= link_to 'シフトの追加', new_shift_path %>
 
 <%= month_calendar events: @shifts do |date, shifts| %>
