@@ -6,6 +6,12 @@
 .field{
   font-size: 20px;
 }
+.from_message{
+  border: none;
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+}
 .comments_lists{
   padding-left: 20px;
 }

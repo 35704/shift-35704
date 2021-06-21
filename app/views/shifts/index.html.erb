@@ -2,7 +2,7 @@
 
 <%= render "comments/index", comment: @comments %>
 
-<%= link_to 'シフトの追加', new_shift_path %>
+<%= link_to 'シフトの追加', new_shift_path, class: :shift_order %>
 
 <%= month_calendar events: @shifts do |date, shifts| %>
   <%= date.day %>
