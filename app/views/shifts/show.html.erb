@@ -1,6 +1,26 @@
-
-<%= @shift.user.first_name %>
-<%= @shift.title %>
-
-<%= link_to "削除", shift_path(@shift.id), method: :delete, class:"item-destroy" %>
+<%= render "shared/header" %>
+<div class='registration-main'>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>
+        詳細
+      </h1>
+    </div>
+    <div class='title'>
+      <%= "ユーザー名：" %>
+      <%= @shift.user.first_name %>
+    </div>
+    <div class='title'>
+      <%= "希望時間："%>
+      <%= @shift.title %>
+    </div>
+    <% if user_signed_in? %>
+      <% if current_user.id == @shift.user.id || current_user.admin? %>
+      <div class='title'>
+        <%= link_to "削除", shift_path(@shift.id), method: :delete, class:"item-destroy" %>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
