@@ -9,7 +9,7 @@ User.create!(
   first_name: "管理者",
   last_name: "権限",
   email: "test@test.com",
-  password: "a22222",
-  password_confirmation: "a22222",
+  password: ENV["SHIFT_PASSWORD_KEY"],
+  password_confirmation: ENV["SHIFT_PASSWORD_KEY"],
   admin: true
 )
